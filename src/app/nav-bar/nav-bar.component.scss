@@ -1,0 +1,114 @@
+.navBar{        // basic navbar settings
+    position: fixed;
+    width: 100%;
+    min-height: 5rem;
+    font-size: small;
+    font-weight: bold;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    left: 0;
+    z-index: 10;
+}
+
+.inputSize{ // input field changes
+    min-width: 15rem;
+    background-color: #f5f5f6;
+}
+
+@media only screen and (min-width: 1000px) {
+    .inputSize{
+        min-width: 25rem;
+        background-color: #f5f5f6;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .navBar{
+        display: none;
+    }
+}
+
+.hover{     // for left side dropdown menu categories
+    padding-bottom: 1.8rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    text-decoration: none;
+    color: black;
+}
+
+
+.hover:hover{   // categories hover
+    border-bottom: 5px solid pink;
+    cursor: pointer;
+}
+
+.dropdown a {       // inner dropdown text
+    color: rgb(73, 69, 69);
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: smaller;
+    display: block;
+}
+
+.dropMenu a{      // inner profile
+    color: rgb(73, 69, 69);
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: smaller;
+    display: block;
+}
+
+.dropdown a:hover{  // profile hover
+    font-weight: bold;
+    font-size: small;
+    cursor: pointer;
+}
+
+.dropMenu a:hover{  // categories hover
+    font-weight: bold;
+    font-size: small;
+    cursor: pointer;
+}
+
+
+.dropdown{
+    visibility: hidden;     //categories dropdown
+    position: absolute;
+    min-width: 10rem;
+    background-color: #f5f5f6;
+    margin-top: 2.1rem;
+    margin-left: -2rem;
+    z-index: 1;
+}
+
+.dropMenu{
+    visibility: hidden;     //profile dropdown
+    position: absolute;
+    min-width: 16rem;
+    min-height: 30rem;
+    background-color: #f5f5f6;
+    margin-top: 2.1rem;
+    margin-left: -5.5rem;
+    z-index: 1;
+    padding: 15px;
+}
+
+
+.dropBtn:hover .dropdown{
+    visibility: visible;
+}
+
+.dropTrigger:hover .dropMenu{
+    visibility: visible;
+}
+
+.dropHover{
+    padding-bottom: 2.4rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.dropMenu button{
+    
+}
