@@ -1,0 +1,33 @@
+<div class="desktop">
+    <div class="sortMenu">sortMenu</div>
+    <div class="filterMenu">
+        <h3>Filter</h3>
+        <h5>Brands</h5>
+        <ul>
+            <li>Allen Solly</li>
+            <li>Raymond</li>
+            <li>Indian Terrian</li>
+            <li>Mach</li>
+            <li>TeamSpirit</li>
+        </ul>
+    </div>
+    <div class="productDisplay">
+        <div class="p-grid">
+            <div *ngFor="let l of products" class="itemSpacing">
+                <div class="card">
+                    <i class="pi pi-heart" (click)="markWishlist()"></i>
+                    <img src="{{l.imageUrl}}" width="100%" alt="">
+                    <div class="card-container">
+                        <h4><b>{{l.name}}</b></h4>
+                        <p>{{l.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mobile">
+    
+</div>
