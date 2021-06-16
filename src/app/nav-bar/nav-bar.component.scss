@@ -109,32 +109,6 @@
     padding-right: 0.3rem;
 }
 
-
-
-
-//Mobile Style Section
-
-
-@media only screen and (min-width: 800px) {
-    .mobileScreen{
-        display: none;
-    }
-}
-
-
-.mobileNav{
-    min-height: 4rem;
-    background-color: #cdcdcd;
-}
-
-.hamIcon{
-    padding: 1rem;
-    // border: 1px solid #838383;
-    margin: 10px;
-    // border-radius: 5px;
-}
-
-.menuItems{
-    padding: 1rem;
-    width: 100%;
+.dropMenu button{
+    
 }

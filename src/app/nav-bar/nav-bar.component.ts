@@ -9,9 +9,6 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  showMenuItem = false;
-  display = false;
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -19,9 +16,5 @@ export class NavBarComponent implements OnInit {
 
   routeToLogin(){
     this.router.navigate(['login']);
-  }
-
-  showMenuItems(){
-    this.showMenuItem = !this.showMenuItem;
   }
 }

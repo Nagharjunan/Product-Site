@@ -1,6 +1,0 @@
-{
-    "/api": {
-      "target": "https://myshopdev.azurewebsites.net/",
-      "secure": false
-    }
-  }
