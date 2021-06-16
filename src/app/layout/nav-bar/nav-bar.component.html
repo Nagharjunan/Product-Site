@@ -1,0 +1,123 @@
+<div class="p-grid navBar p-shadow-1">
+    <div class="p-col-1 p-d-flex p-jc-around p-ai-center"><a href="#"><img src="../../assets/logo.PNG" height="36" width="53" alt="logo"></a></div>
+    <div class="p-col-4 p-d-flex p-jc-around p-ai-center wrapper">
+        <div class="dropBtn">
+            <a class="hover" href="">MENS</a>
+            <div class="dropdown">
+                <a href="" [routerLink]="['/products']" style="color: pink;">Top Wear</a>
+                <a href="">Shirt</a>
+                <a href="">T-Shirt</a>
+            </div>
+        </div>
+        <div class="dropBtn">
+            <a class="hover" href="">WOMEN</a>
+            <div class="dropdown">
+                <a href="" style="color: pink;">Top Wear</a>
+                <a href="">Shirt</a>
+                <a href="">T-Shirt</a>
+            </div>
+        </div>
+        <div><a class="hover" href="">KIDS</a></div>
+        <div><a class="hover" href="">HOME & LIVING</a></div>
+        <div><a class="hover" href="">BEAUTY</a></div>
+        <div></div>
+    </div>
+    <div class="p-col-5 p-d-flex p-jc-between p-ai-center">
+        <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText class="inputSize" placeholder="search for products,brands and more">         
+        </span>
+    </div>
+    <div class="p-col-2 p-d-flex p-jc-around p-ai-center">
+        <div class="dropTrigger">
+            <a class="dropHover">PROFILE</a>
+            <div class="dropMenu">
+                <p>Welcome</p>
+                <h5>Login To access account and manage orders</h5>
+                <button pButton class="p-button-outlined" (click)="routeToLogin()">LOGIN/SIGNUP</button>
+            </div>
+        </div>
+        <i class="pi pi-heart p-mr-2">
+            <div style="margin-left: -20px;">WishList</div>
+        </i>
+        <i class="pi pi-calendar p-mr-2">
+            <div style="margin-left: -6px;">Cart</div>
+        </i>
+    </div>
+</div>
+
+
+<!-- Mobile View Section -->
+<div class="mobileScreen">
+    <p-sidebar [(visible)]="display" [style]="{width:'17em'}" position= "left">
+        <div class="mobileBar">
+            <div class="menuMain p-d-flex p-flex-column">
+                <div class="menuItems" [routerLink]="['']">Home</div>
+                <div class="menuItems"  (click)="display = false" [routerLink]="['/products']">Men</div>
+                <div class="menuItems">Women</div>
+                <div class="menuItems">Kids</div>
+                <div class="menuItems">Living</div>
+                <div class="menuItems">Decor</div>
+                <div class="menuItems">My Orders</div>
+            </div>
+        
+            <div class="p-d-flex p-flex-column">
+                <div class="menuItems">
+                    FAQs
+                </div>
+                <div class="menuItems">
+                    CONTACT US
+                </div>
+                <div class="menuItems">
+                    Log Out
+                </div>
+            </div>
+            
+            <div class="p-d-flex p-jc-around">
+                <div><i class="pi pi-heart" style="font-size: 1.5rem;"></i></div>
+                <div><i class="pi pi-calendar" style="font-size: 1.5rem;"></i></div>
+                <div><i class="pi pi-user" style="font-size: 1.5rem;"  (click)="routeToLogin()"></i></div>
+            </div>
+        </div>
+    </p-sidebar>
+    
+    <div class="mobileNav">
+        <i class="pi pi-bars hamIcon" (click)="showMenuItems()" (click)="display = true"></i>
+    </div>
+</div>
+
+
+<!-- <div class="mobileBar">
+    <div class="mobileNav p-d-flex p-flex-row-reverse p-ai-center">
+        <div class="hamBurger">
+            <i class="pi pi-bars hamIcon" (click)="showMenuItems()"></i>
+        </div>
+    </div>
+    <div class="menuMain p-d-flex p-flex-column">
+        <div class="menuItems" *ngIf="showMenuItem" [routerLink]="['']">Home</div>
+        <div class="menuItems" *ngIf="showMenuItem" [routerLink]="['/products']">Men</div>
+        <div class="menuItems" *ngIf="showMenuItem">Women</div>
+        <div class="menuItems" *ngIf="showMenuItem">Kids</div>
+        <div class="menuItems" *ngIf="showMenuItem">Living</div>
+        <div class="menuItems" *ngIf="showMenuItem">Decor</div>
+        <div class="menuItems" *ngIf="showMenuItem">My Orders</div>
+    </div>
+
+    <div class="p-d-flex p-flex-column">
+        <div *ngIf="showMenuItem" class="menuItems">
+            FAQs
+        </div>
+        <div *ngIf="showMenuItem" class="menuItems">
+            CONTACT US
+        </div>
+        <div *ngIf="showMenuItem" class="menuItems">
+            Log Out
+        </div>
+    </div>
+    
+    <div class="p-d-flex p-jc-around">
+        <div *ngIf="showMenuItem"><i class="pi pi-heart" style="font-size: 1.5rem;"></i></div>
+        <div *ngIf="showMenuItem"><i class="pi pi-calendar" style="font-size: 1.5rem;"></i></div>
+        <div *ngIf="showMenuItem"><i class="pi pi-user" style="font-size: 1.5rem;"></i></div>
+    </div>
+</div> -->
